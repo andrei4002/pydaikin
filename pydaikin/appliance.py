@@ -149,7 +149,7 @@ class Appliance(entity.Entity):
                     'value': self.values[key]
                 }
                 
-        print result
+        print(result)
 
     def translate_mac(self, value):
         r = ""
