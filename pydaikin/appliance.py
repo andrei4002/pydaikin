@@ -149,7 +149,7 @@ class Appliance(entity.Entity):
                     'value': self.values[key]
                 }
         with open(file, 'w') as outfile:
-            json.dump(data, outfile)
+            json.dump(result, outfile)
 
     def translate_mac(self, value):
         r = ""
