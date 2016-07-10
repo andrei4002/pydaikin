@@ -20,7 +20,7 @@ HTTP_RESOURCES = ['common/basic_info'
                   , 'aircon/get_scdltimer'
               ]
 
-VALUES_SUMMARY = ['name', 'ip', 'mac', 'mode', 'b_f_rate', 'f_dir'
+VALUES_SUMMARY = ['name', 'ip', 'mac', 'mode', 'f_rate', 'b_f_rate', 'f_dir'
                   , 'htemp', 'otemp', 'stemp'
                   , 'cmpfreq', 'en_hol', 'err']
 
