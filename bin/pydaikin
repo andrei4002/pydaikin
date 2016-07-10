@@ -23,8 +23,8 @@ group.add_argument('-l', '--list', action='store_true',
 parser.add_argument('-a', '--all', action='store_true',
                     help='show all the values available for the device')
                     
-parser.add_argument('-j', '--json', action='store_true',
-                    help='show summary json')
+parser.add_argument('-j', '--json', type = str, action='store_true',
+                    help='print summary json to file')
 
 settings = parser.add_argument_group('device settings',
                                      'Modify paramaters of a device')
@@ -86,7 +86,7 @@ else:
 
     if settings == {}:
         if args.json:
-            e.summary_json()
+            e.summary_json(args.json)
         else:
             e.show_values(only_summary)
 

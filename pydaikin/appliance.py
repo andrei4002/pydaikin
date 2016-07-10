@@ -135,7 +135,7 @@ class Appliance(entity.Entity):
                 (k, v) = self.represent(key)
                 print ("%18s: %s" % (k, v))
                 
-    def summary_json(self):
+    def summary_json(self, file):
         keys = VALUES_SUMMARY
         
         result = {}
@@ -148,8 +148,8 @@ class Appliance(entity.Entity):
                     'label_value': v,
                     'value': self.values[key]
                 }
-                
-        print(json.dumps(result))
+        with open(file, 'w') as outfile:
+            json.dump(data, outfile)
 
     def translate_mac(self, value):
         r = ""
