@@ -1,6 +1,6 @@
 import pydaikin.entity as entity
 import pydaikin.discovery as discovery
-
+import json
 import socket
 import requests
 
@@ -149,7 +149,7 @@ class Appliance(entity.Entity):
                     'value': self.values[key]
                 }
                 
-        print(result)
+        print(json.dumps(result))
 
     def translate_mac(self, value):
         r = ""
